@@ -19,7 +19,15 @@ cd modules/<name of module>
 source activate.sh
 ```
 
+Some modules also have their own README with additional details.
+
 ### Running the code
 
 `.ipynb` notebooks can be easily run using the Jupyter family of extensions for VS Code.
 Make sure to select the Python interpreter from your `.venv` using the VS Code UI.
+
+### Misc
+
+All the AWS-deployed modules have quirky names.
+These are used for naming VPCs, IAM roles, Policies, etc on AWS so that it's clear
+which resources belong to which projects.

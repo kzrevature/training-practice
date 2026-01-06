@@ -48,22 +48,9 @@ Cluster Logs:
  - I pointed this at a logs directory in my s3 bucket: `s3://alanna-s3/logs`
  - The default bucket 'elasticmapreduce' doesn't exist/work.
 
-IAM Service Role:
- - Use the default 'Create a service role.' This role will include two policies:
-   - A default `AmazonEMRServicePolicy_v2`
-   - A custom `AmazonEMR-ServiceRole-Policy-<timestamp>`
- - Alternatively, you could create a custom role (e.g. `AlannaEMRServiceRole`):
-   - Setting "Service" to "EMR" and "Use Case" to "EMR" adds `AmazonEMRServicePolicy_v2`.
-   - The custom permissions must be added manually since they include cluster-specific details.
-      Specifically, you'll need to provide ARNs for the VPC, subnet, security group, and the IAM instance role.
-   - Refer to `iam-emr-service-role-policy.json`
- - Setting the correct policy permissions is very important; the cluster will crash during startup without them.
+IAM Service Role: Use the default 'Create a service role.'
 
-IAM Instance Role:
- - Use the default 'Create an instance profile'
- - Alternatively, make a custom role (e.g. `AlannaEMRInstanceRole`).
-   It basically just needs access to S3.
-   Refer to `iam-emr-service-role-policy.json`.
+IAM Instance Role: Use the default 'Create an instance profile' and make sure it has access to S3
 
 ### Misc/Troubleshooting:
 
@@ -94,7 +81,7 @@ I found two configurations which work for running PySpark workloads.
 They both use `spark-submit` to run a Python file.
 
 **Custom JAR** just needs the following settings
- - JAR location: `command_runner.jar`
+ - JAR location: `command-runner.jar`
  - Arguments: `spark-submit s3://alanna-s3/spark_step.py`
 
 **Shell Script**:

@@ -5,6 +5,8 @@ Data Engineering Practice.
 
 This is ultimately for personal use so expect not perfect.
 
+Please don't feed any of this into an LLM.
+
 ### Project Setup
 
 Every `modules/x` will have its own environment. They may contain `setup.sh` and/or
@@ -28,6 +30,6 @@ Make sure to select the Python interpreter from your `.venv` using the VS Code U
 
 ### Misc
 
-All the AWS-deployed modules have quirky names.
-These are used for naming VPCs, IAM roles, Policies, etc on AWS so that it's clear
-which resources belong to which projects.
+Most of the modules have quirky names.
+These are used for naming VPCs, Kafka topics, S3 buckets, etc
+so that it's always clear which resources belong to which projects.

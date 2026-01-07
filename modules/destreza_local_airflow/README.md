@@ -68,3 +68,11 @@ airflow dags trigger destreza_dag
 
 Again, the CLI is quite limited and I would avoid it whenever possible.
 But it's there if you need it.
+
+### Misc
+
+You do not need to install Airflow locally,
+since it only runs in the containerized instance.
+So why have I included a `requirements.txt`?
+Well, I wanted Intellisense to work in my dev environment
+and that of course needs an Airflow installation.

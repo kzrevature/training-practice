@@ -1,0 +1,8 @@
+id,name,category,price,quantity,calories
+1,Apple,Fruit,1.50,45,90
+2,Banana,Fruit,0.50,50,125
+3,Carrot,Vegetable,0.35,40,25
+4,Bread,Bakery,1.50,15,470
+5,Milk,Dairy,1.95,8,280
+6,Orange,Fruit,1.05,67,80
+7,Spinach,Vegetable,1.10,15,10
